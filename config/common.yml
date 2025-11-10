@@ -1,0 +1,31 @@
+services:
+  _defaults:
+    public: true
+
+  # Repository (needed in both front and admin)
+  CurrencyRate\Repository\CurrencyRateRepository:
+    public: true
+
+  currencyrate.repository:
+    alias: CurrencyRate\Repository\CurrencyRateRepository
+    public: true
+
+  # Price Calculator Service (needed in front-office for hooks)
+  CurrencyRate\Service\CurrencyPriceCalculatorService:
+    arguments:
+      - '@CurrencyRate\Repository\CurrencyRateRepository'
+    public: true
+
+  currencyrate.price_calculator:
+    alias: CurrencyRate\Service\CurrencyPriceCalculatorService
+    public: true
+
+  # Product Display Service (needed in front-office for hooks)
+  CurrencyRate\Service\ProductCurrencyDisplayService:
+    arguments:
+      - '@CurrencyRate\Service\CurrencyPriceCalculatorService'
+    public: true
+
+  currencyrate.product_display:
+    alias: CurrencyRate\Service\ProductCurrencyDisplayService
+    public: true

@@ -1,0 +1,63 @@
+{% extends '@PrestaShop/Admin/layout.html.twig' %}
+
+{% block content %}
+  <div class="mb-3">
+    <a href="{{ historyUrl }}" class="btn btn-primary" target="_blank">
+      <i class="material-icons">history</i> {{ 'View Historical Rates (Front Office)'|trans({}, 'Modules.Currencyrate.Admin') }}
+    </a>
+  </div>
+
+  {{ form_start(configurationForm) }}
+  <div class="card">
+    <h3 class="card-header">
+      <i class="material-icons">settings</i> {{ 'Currency Rate Settings'|trans({}, 'Modules.Currencyrate.Admin') }}
+    </h3>
+    <div class="card-body">
+      <div class="form-wrapper">
+        {{ form_widget(configurationForm) }}
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="d-flex justify-content-end">
+        <button class="btn btn-primary float-right" id="save-button">
+          {{ 'Save'|trans({}, 'Admin.Actions') }}
+        </button>
+      </div>
+    </div>
+  </div>
+  {{ form_end(configurationForm) }}
+
+  <div class="card mt-3">
+    <h3 class="card-header">
+      <i class="material-icons">info</i> {{ 'Statistics'|trans({}, 'Modules.Currencyrate.Admin') }}
+    </h3>
+    <div class="card-body">
+      <div class="alert alert-info">
+        <strong>{{ 'Total rates stored'|trans({}, 'Modules.Currencyrate.Admin') }}:</strong> {{ ratesCount }}<br>
+        <strong>{{ 'Last update'|trans({}, 'Modules.Currencyrate.Admin') }}:</strong> {{ lastUpdate }}
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-3">
+    <h3 class="card-header">
+      <i class="material-icons">calendar_today</i> {{ 'Fetch Historical Rates'|trans({}, 'Modules.Currencyrate.Admin') }}
+    </h3>
+    <div class="card-body">
+      <div class="alert alert-info">
+        <strong>{{ 'Active currencies'|trans({}, 'Modules.Currencyrate.Admin') }}:</strong> {{ currencyCodes|join(', ') }} ({{ currencyCount }} {{ 'total'|trans({}, 'Modules.Currencyrate.Admin') }})
+      </div>
+      <div class="alert alert-warning">
+        {{ 'This will fetch currency rates for the last 30 days for all active store currencies.'|trans({}, 'Modules.Currencyrate.Admin') }}
+      </div>
+    </div>
+    <div class="card-footer">
+      <form method="post" action="{{ path('currency_rate_fetch_historical') }}">
+        <input type="hidden" name="_token" value="{{ csrf_token('currency-rate-fetch-historical') }}">
+        <button type="submit" class="btn btn-secondary">
+          <i class="material-icons">download</i> {{ 'Fetch Historical Rates (Last 30 Days)'|trans({}, 'Modules.Currencyrate.Admin') }}
+        </button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,4 @@
+# Main services file - imports common services for both admin and front contexts
+imports:
+  - { resource: common.yml }
+

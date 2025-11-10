@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <body>
+      <!-- Configuration form -->
+      <trans-unit id="3b7e23cb641743deb30e1b35c83c10dd">
+        <source>API Service</source>
+        <target>API Service</target>
+        <note>Form field label</note>
+      </trans-unit>
+      <trans-unit id="4c3f8c4e21a69cb4b0f9c2b5e5d6e1a2">
+        <source>NBP (Narodowy Bank Polski)</source>
+        <target>NBP (National Bank of Poland)</target>
+        <note>Provider name</note>
+      </trans-unit>
+      <trans-unit id="5d4g9d5f32b80dc5c1g0d3c6f6e7f2b3">
+        <source>Frankfurter (European Central Bank)</source>
+        <target>Frankfurter (European Central Bank)</target>
+        <note>Provider name</note>
+      </trans-unit>
+      <trans-unit id="6e5h0e6g43c91ed6d2h1e4d7g7f8g3c4">
+        <source>Select the API service to fetch currency rates from.</source>
+        <target>Select the API service to fetch currency rates from.</target>
+        <note>Form field help text</note>
+      </trans-unit>
+      <trans-unit id="7f6i1f7h54da2fe7e3i2f5e8h8g9h4d5">
+        <source>Auto Update</source>
+        <target>Auto Update</target>
+        <note>Form field label</note>
+      </trans-unit>
+      <trans-unit id="8g7j2g8i65eb3gf8f4j3g6f9i9h0i5e6">
+        <source>Enabled</source>
+        <target>Enabled</target>
+        <note>Form field option</note>
+      </trans-unit>
+      <trans-unit id="9h8k3h9j76fc4hg9g5k4h7g0j0i1j6f7">
+        <source>Disabled</source>
+        <target>Disabled</target>
+        <note>Form field option</note>
+      </trans-unit>
+      <trans-unit id="0i9l4i0k87gd5ih0h6l5i8h1k1j2k7g8">
+        <source>Automatically update currency rates daily via cron.</source>
+        <target>Automatically update currency rates daily via cron.</target>
+        <note>Form field help text</note>
+      </trans-unit>
+
+      <!-- Configuration page template -->
+      <trans-unit id="1j0m5j1l98he6ji1i7m6j9i2l2k3l8h9">
+        <source>View Historical Rates (Front Office)</source>
+        <target>View Historical Rates (Front Office)</target>
+        <note>Button label</note>
+      </trans-unit>
+      <trans-unit id="2k1n6k2m09if7kj2j8n7k0j3m3l4m9i0">
+        <source>Currency Rate Settings</source>
+        <target>Currency Rate Settings</target>
+        <note>Page title</note>
+      </trans-unit>
+      <trans-unit id="3l2o7l3n10jg8lk3k9o8l1k4n4m5n0j1">
+        <source>Statistics</source>
+        <target>Statistics</target>
+        <note>Section title</note>
+      </trans-unit>
+      <trans-unit id="4m3p8m4o21kh9ml4l0p9m2l5o5n6o1k2">
+        <source>Total rates stored</source>
+        <target>Total rates stored</target>
+        <note>Statistics label</note>
+      </trans-unit>
+      <trans-unit id="5n4q9n5p32li0nm5m1q0n3m6p6o7p2l3">
+        <source>Last update</source>
+        <target>Last update</target>
+        <note>Statistics label</note>
+      </trans-unit>
+      <trans-unit id="6o5r0o6q43mj1on6n2r1o4n7q7p8q3m4">
+        <source>Never</source>
+        <target>Never</target>
+        <note>Last update value</note>
+      </trans-unit>
+      <trans-unit id="7p6s1p7r54nk2po7o3s2p5o8r8q9r4n5">
+        <source>Fetch Historical Rates</source>
+        <target>Fetch Historical Rates</target>
+        <note>Section title</note>
+      </trans-unit>
+      <trans-unit id="8q7t2q8s65ol3qp8p4t3q6p9s9r0s5o6">
+        <source>Active currencies</source>
+        <target>Active currencies</target>
+        <note>Information label</note>
+      </trans-unit>
+      <trans-unit id="9r8u3r9t76pm4rq9q5u4r7q0t0s1t6p7">
+        <source>total</source>
+        <target>total</target>
+        <note>Count label</note>
+      </trans-unit>
+      <trans-unit id="0s9v4s0u87qn5sr0r6v5s8r1u1t2u7q8">
+        <source>This will fetch currency rates for the last 30 days for all active store currencies.</source>
+        <target>This will fetch currency rates for the last 30 days for all active store currencies.</target>
+        <note>Warning message</note>
+      </trans-unit>
+      <trans-unit id="1t0w5t1v98ro6ts1s7w6t9s2v2u3v8r9">
+        <source>Fetch Historical Rates (Last 30 Days)</source>
+        <target>Fetch Historical Rates (Last 30 Days)</target>
+        <note>Button label</note>
+      </trans-unit>
+
+      <!-- Controller messages -->
+      <trans-unit id="2u1x6u2w09sp7ut2t8x7u0t3w3v4w9s0">
+        <source>No active currencies found in the store.</source>
+        <target>No active currencies found in the store.</target>
+        <note>Warning message</note>
+      </trans-unit>
+      <trans-unit id="3v2y7v3x10tq8vu3u9y8v1u4x4w5x0t1">
+        <source>Successfully synced %d currency rates for period %s to %s</source>
+        <target>Successfully synced %d currency rates for period %s to %s</target>
+        <note>Success message</note>
+      </trans-unit>
+      <trans-unit id="4w3z8w4y21ur9wv4v0z9w2v5y5x6y1u2">
+        <source>Synced %d rates with %d errors for currencies: %s. Check logs for details.</source>
+        <target>Synced %d rates with %d errors for currencies: %s. Check logs for details.</target>
+        <note>Warning message</note>
+      </trans-unit>
+      <trans-unit id="5x40a0x5z32vs0xw5w1a0x3w6z6y7z2v3">
+        <source>Error syncing rates: </source>
+        <target>Error syncing rates: </target>
+        <note>Error message prefix</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,84 @@
+imports:
+  - { resource: ../common.yml }
+
+services:
+  _defaults:
+    public: true
+
+  # Providers (admin only - needed for currency sync)
+  CurrencyRate\Provider\NbpCurrencyRateProvider:
+    arguments:
+      $http: '@http_client'
+    tags: ['currencyrate.rate_provider']
+
+  CurrencyRate\Provider\FrankfurterCurrencyRateProvider:
+    arguments:
+      $http: '@http_client'
+    tags: ['currencyrate.rate_provider']
+
+  # Registry and Factory (admin only)
+  CurrencyRate\Registry\CurrencyRateProviderRegistry:
+    arguments:
+      - !tagged_iterator 'currencyrate.rate_provider'
+    public: true
+
+  CurrencyRate\Factory\CurrencyRateProviderFactory:
+    arguments:
+      - '@CurrencyRate\Registry\CurrencyRateProviderRegistry'
+    public: true
+
+  # Sync Service (admin only)
+  CurrencyRate\Service\SyncCurrencyRateService:
+    arguments:
+      - '@CurrencyRate\Factory\CurrencyRateProviderFactory'
+      - '@CurrencyRate\Repository\CurrencyRateRepository'
+      - '@CurrencyRate\Service\CurrencyPriceCalculatorService'
+    public: true
+
+  currencyrate.sync_rates:
+    alias: CurrencyRate\Service\SyncCurrencyRateService
+    public: true
+
+  # Command (admin only - CLI context)
+  CurrencyRate\Command\RefreshCurrencyRatesCommand:
+    arguments:
+      - '@CurrencyRate\Service\SyncCurrencyRateService'
+    tags:
+      - { name: 'console.command' }
+    public: true
+
+  # Form Type (admin only)
+  currencyrate.form.type.currency_rate_configuration:
+    class: 'CurrencyRate\Form\CurrencyRateConfigurationFormType'
+    parent: 'form.type.translatable.aware'
+    public: true
+    tags:
+      - { name: form.type }
+
+  # Data Configuration (admin only)
+  currencyrate.form.currency_rate_data_configuration:
+    class: CurrencyRate\Form\CurrencyRateDataConfiguration
+    arguments: ['@prestashop.adapter.legacy.configuration']
+
+  # Form Data Provider (admin only)
+  currencyrate.form.currency_rate_form_data_provider:
+    class: 'CurrencyRate\Form\CurrencyRateFormDataProvider'
+    arguments:
+      - '@currencyrate.form.currency_rate_data_configuration'
+
+  # Form Handler (admin only)
+  currencyrate.form.currency_rate_configuration_form_data_handler:
+    class: 'PrestaShop\PrestaShop\Core\Form\Handler'
+    arguments:
+      - '@form.factory'
+      - '@prestashop.core.hook.dispatcher'
+      - '@currencyrate.form.currency_rate_form_data_provider'
+      - 'CurrencyRate\Form\CurrencyRateConfigurationFormType'
+      - 'CurrencyRateConfiguration'
+
+  # Controller (admin only)
+  CurrencyRate\Controller\CurrencyRateConfigurationController:
+    calls:
+      - [setSyncCurrencyRateService, ['@CurrencyRate\Service\SyncCurrencyRateService']]
+      - [setLogger, ['@logger']]
+    public: true

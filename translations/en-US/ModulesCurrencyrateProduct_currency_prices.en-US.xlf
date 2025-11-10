@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <body>
+      <!-- Product currency prices template -->
+      <trans-unit id="a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6">
+        <source>Price in other currencies</source>
+        <target>Price in other currencies</target>
+        <note>Card header title</note>
+      </trans-unit>
+      <trans-unit id="b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7">
+        <source>Prices calculated based on current exchange rates</source>
+        <target>Prices calculated based on current exchange rates</target>
+        <note>Card header subtitle</note>
+      </trans-unit>
+      <trans-unit id="c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8">
+        <source>Currency</source>
+        <target>Currency</target>
+        <note>Table column header</note>
+      </trans-unit>
+      <trans-unit id="d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9">
+        <source>Price</source>
+        <target>Price</target>
+        <note>Table column header</note>
+      </trans-unit>
+      <trans-unit id="e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0">
+        <source>Exchange Rate</source>
+        <target>Exchange Rate</target>
+        <note>Table column header</note>
+      </trans-unit>
+      <trans-unit id="f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1">
+        <source>Exchange rates are updated automatically and may vary.</source>
+        <target>Exchange rates are updated automatically and may vary.</target>
+        <note>Card footer notice</note>
+      </trans-unit>
+      <trans-unit id="g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2">
+        <source>Provider:</source>
+        <target>Provider:</target>
+        <note>Provider label</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

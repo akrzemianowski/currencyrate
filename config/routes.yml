@@ -1,0 +1,16 @@
+currency_rate_configuration:
+  path: /currencyrate/configuration
+  methods: [GET, POST]
+  defaults:
+    _controller: 'CurrencyRate\Controller\CurrencyRateConfigurationController::index'
+    # Needed to work with tab system
+    _legacy_controller: AdminCurrencyRate
+    _legacy_link: AdminCurrencyRate
+
+currency_rate_fetch_historical:
+  path: /currencyrate/fetch-historical
+  methods: [POST]
+  defaults:
+    _controller: 'CurrencyRate\Controller\CurrencyRateConfigurationController::fetchHistoricalRates'
+    _legacy_controller: AdminCurrencyRate
+    _legacy_link: AdminCurrencyRate

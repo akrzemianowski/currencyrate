@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <body>
+      <!-- History page template -->
+      <trans-unit id="h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3">
+        <source>Historical Currency Rates (Last 30 Days)</source>
+        <target>Historical Currency Rates (Last 30 Days)</target>
+        <note>Page title</note>
+      </trans-unit>
+      <trans-unit id="i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4">
+        <source>Provider</source>
+        <target>Provider</target>
+        <note>Information label</note>
+      </trans-unit>
+      <trans-unit id="j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5">
+        <source>Total records</source>
+        <target>Total records</target>
+        <note>Information label</note>
+      </trans-unit>
+      <trans-unit id="k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6">
+        <source>Date</source>
+        <target>Date</target>
+        <note>Table column header</note>
+      </trans-unit>
+      <trans-unit id="l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6a7">
+        <source>Base Currency</source>
+        <target>Base Currency</target>
+        <note>Table column header</note>
+      </trans-unit>
+      <trans-unit id="m3n4o5p6q7r8s9t0u1v2w3x4y5z6a7b8">
+        <source>Quote Currency</source>
+        <target>Quote Currency</target>
+        <note>Table column header</note>
+      </trans-unit>
+      <trans-unit id="n4o5p6q7r8s9t0u1v2w3x4y5z6a7b8c9">
+        <source>Last Updated</source>
+        <target>Last Updated</target>
+        <note>Table column header</note>
+      </trans-unit>
+      <trans-unit id="o5p6q7r8s9t0u1v2w3x4y5z6a7b8c9d0">
+        <source>Showing page</source>
+        <target>Showing page</target>
+        <note>Pagination text</note>
+      </trans-unit>
+      <trans-unit id="p6q7r8s9t0u1v2w3x4y5z6a7b8c9d0e1">
+        <source>of</source>
+        <target>of</target>
+        <note>Pagination text</note>
+      </trans-unit>
+      <trans-unit id="q7r8s9t0u1v2w3x4y5z6a7b8c9d0e1f2">
+        <source>No historical data available. Please check back later.</source>
+        <target>No historical data available. Please check back later.</target>
+        <note>Empty state message</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

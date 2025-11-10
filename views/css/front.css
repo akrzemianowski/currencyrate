@@ -1,0 +1,68 @@
+.currency-rate-history {
+    margin: 20px 0;
+}
+
+.currency-rate-history .table {
+    margin-top: 20px;
+}
+
+.currency-rate-history .table thead th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.currency-rate-history .table thead th a {
+    color: #333;
+    display: block;
+    text-decoration: none;
+}
+
+.currency-rate-history .table thead th a:hover {
+    color: #007bff;
+}
+
+.currency-rate-history .table thead th .material-icons {
+    font-size: 16px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.currency-rate-history .badge {
+    font-size: 0.875rem;
+    padding: 0.35em 0.65em;
+}
+
+.currency-rate-history .pagination {
+    margin-top: 20px;
+}
+
+.currency-rate-history .pagination .material-icons {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.currency-rate-history .page-link {
+    color: #007bff;
+    cursor: pointer;
+}
+
+.currency-rate-history .page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+.currency-rate-history .page-item.disabled .page-link {
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .currency-rate-history .table {
+        font-size: 0.875rem;
+    }
+
+    .currency-rate-history .table thead th .material-icons {
+        display: none;
+    }
+}
